@@ -1,0 +1,12 @@
+(torchgpu) ivtest@sim2:~/wjf/surrogate/sutest$ git push -u origin mainerror: src refspec main does not match any.
+error: failed to push some refs to 'git@wjf.github.com:wujf1517/surrogate_ubuntu.git'
+(torchgpu) ivtest@sim2:~/wjf/surrogate/sutest$ git pull origin masterfatal: Couldn't find remote ref master
+
+# xiamianzheyibuzhijie jiejuewenti
+(torchgpu) ivtest@sim2:~/wjf/surrogate/sutest$ git push origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 218 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@wjf.github.com:wujf1517/surrogate_ubuntu.git
+ * [new branch]      master -> master
+(torchgpu) ivtest@sim2:~/wjf/surrogate/sutest$ 
