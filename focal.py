@@ -28,25 +28,17 @@ batch_size =32
 num_classes = 2             # 分类数目
 
 img_resize = [128,128]
-<<<<<<< HEAD
-epoch =20                # dataset.repeat() 的参数，设置为None，可以不断取数
-=======
-epoch =10                # dataset.repeat() 的参数，设置为None，可以不断取数
->>>>>>> 76768a7a53e387fd5376a3cba6df5292dba09d5a
-num_examples = 850 
+epoch =30                # dataset.repeat() 的参数，设置为None，可以不断取数
+
+num_examples = 800 
 
 path = r'PicClassTrain'
 path2 = r'PicClassTest'
 
-<<<<<<< HEAD
 files_1 = os.listdir(path+'/1')   # 读入文件夹
 num_image_1 = len(files_1)       # 统计文件夹中的文件个数
 files_2 = os.listdir(path+'/2')   # 读入文件夹
-=======
-files_1 = os.listdir(path+'\1')   # 读入文件夹
-num_image_1 = len(files_1)       # 统计文件夹中的文件个数
-files_2 = os.listdir(path+'\2')   # 读入文件夹
->>>>>>> 76768a7a53e387fd5376a3cba6df5292dba09d5a
+
 num_image_2 = len(files_2)       # 统计文件夹中的文件个数
 if num_image_1>num_image_2:
     num_image_weight = (num_image_1)/num_image_2
@@ -309,13 +301,10 @@ with tf.Session() as sess:
             # accuracy_result_sum_acc = tf.Summary(value=[tf.Summary.Value(tag="accuracy_test", simple_value=acc_test)]) # 转换为tf.summary对象
             # writer.add_summary(accuracy_result_sum_acc,i*batch_idxs+j)
             # accuracy_result_sum = tf.Summary(value=[tf.Summary.Value(tag="cross_entropy_test", simple_value=cross_entropy_test)]) # 转换为tf.summary对象
-            # writer.add_summary(accuracy_result_sum,i*batch_idxs+j)
+            # writer.add_summary(acc
 
-<<<<<<< HEAD
     save_path = saver.save(sess,"saver/save_net")
-=======
-    save_path = saver.save(sess,"saver\save_net")
->>>>>>> 76768a7a53e387fd5376a3cba6df5292dba09d5a
+
     print("参数保存文件：",save_path)
 
     sess.run(iterator.make_initializer(dataset2))

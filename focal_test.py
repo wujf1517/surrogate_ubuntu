@@ -30,26 +30,18 @@ epoch = 1
 batch_size =32
 num_classes = 2             # 分类数目
 
-<<<<<<< HEAD
 RGB_path = 'RGB/RGB1'
-=======
-RGB_path = 'RGB\\RGB5'
->>>>>>> 76768a7a53e387fd5376a3cba6df5292dba09d5a
+
 files = os.listdir(RGB_path)   # 读入文件夹
 num_image = len(files)       # 统计文件夹中的文件个数
 
 num_loop = int(num_image/batch_size)     #数据集中的图片总数除batch
 
 path1 = r'PicClassTrain'
-<<<<<<< HEAD
 files_1 = os.listdir(path1+'/1')   # 读入文件夹
 num_image_1 = len(files_1)       # 统计文件夹中的文件个数
 files_2 = os.listdir(path1+'/2')   # 读入文件夹
-=======
-files_1 = os.listdir(path1+'\\1')   # 读入文件夹
-num_image_1 = len(files_1)       # 统计文件夹中的文件个数
-files_2 = os.listdir(path1+'\\2')   # 读入文件夹
->>>>>>> 76768a7a53e387fd5376a3cba6df5292dba09d5a
+
 num_image_2 = len(files_2)       # 统计文件夹中的文件个数
 if num_image_1>num_image_2:
     num_image_weight = (num_image_1)/num_image_2
@@ -59,11 +51,8 @@ else :
     raw_rate = (num_image_1)/(num_image_1+num_image_2)
 print(num_image_weight)
 
-<<<<<<< HEAD
 path = r'dataRecord/LK1'
-=======
-path = r'dataRecord\WithoutV_LK5'
->>>>>>> 76768a7a53e387fd5376a3cba6df5292dba09d5a
+
 
 # batch_size = 32
 img_resize = [128,128]
@@ -316,11 +305,8 @@ with tf.Session() as sess:
         val_test, l_test = sess.run(one_element)
         l_test = one_hot(l_test,num_classes) # 原来为2分类 l = one_hot(l,2) one_hot的输入要从0开始
         # print(l_test)
-<<<<<<< HEAD
         saver.restore(sess, 'saver/save_net')
-=======
-        saver.restore(sess, 'saver\save_net')
->>>>>>> 76768a7a53e387fd5376a3cba6df5292dba09d5a
+
         y_test,acc, loss = sess.run([y_conv,accuracy, cross_entropy], feed_dict={x:(val_test*(1. / 255)-0.5), y_:l_test,keep_prob:1})
         y_pre = np.argmax(y_test,1)
         l_te = np.argmax(l_test,1)
