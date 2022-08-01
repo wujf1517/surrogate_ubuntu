@@ -30,7 +30,7 @@ epoch = 1
 batch_size =32
 num_classes = 2             # 分类数目
 
-RGB_path = 'RGB/RGB1'
+RGB_path = 'RGB/RGB5'
 
 files = os.listdir(RGB_path)   # 读入文件夹
 num_image = len(files)       # 统计文件夹中的文件个数
@@ -51,7 +51,7 @@ else :
     raw_rate = (num_image_1)/(num_image_1+num_image_2)
 print(num_image_weight)
 
-path = r'dataRecord/LK1'
+path = r'dataRecord/LK5'
 
 
 # batch_size = 32
@@ -250,7 +250,7 @@ with tf.name_scope('cross_entropy'):
 
 with tf.name_scope('image_input'):
     img, label = ReadMyownData.read_and_decode("123train.tfrecords")
-    img_test, label_test = ReadMyownData.read_and_decode("dataRecord\\Random_1600_7_3\\123train.tfrecords")  # 123test.tfrecords
+    img_test, label_test = ReadMyownData.read_and_decode("dataRecord/Random_1600_7_3/123train.tfrecords")  # 123test.tfrecords
 
 # sess = tf.Session()
 # merged = tf.summary.merge_all()                                 # 合并所有,所有summary都保存在日志中，以便tensorboard进行显示。Merges all summaries collected in the default graph.

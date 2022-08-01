@@ -198,18 +198,31 @@
 # print(one_hot(a,3))
 # print(one_hot(2,2))
 
-import os
-import shutil
-def setDir(filepath):
-    '''
-    如果文件夹不存在就创建，如果文件存在就清空！
-    :param filepath:需要创建的文件夹路径
-    :return:
-    '''
-    if not os.path.exists(filepath):
-        os.mkdir(filepath)
-    else:
-        shutil.rmtree(filepath)  # 递归删除filepath目录的内容
-        os.mkdir(filepath)
+# import os
+# import shutil
+# def setDir(filepath):
+#     '''
+#     如果文件夹不存在就创建，如果文件存在就清空！
+#     :param filepath:需要创建的文件夹路径
+#     :return:
+#     '''
+#     if not os.path.exists(filepath):
+#         os.mkdir(filepath)
+#     else:
+#         shutil.rmtree(filepath)  # 递归删除filepath目录的内容
+#         os.mkdir(filepath)
 
-setDir('PicClassTrain\\2')
+# setDir('PicClassTrain\\2')
+import numpy as np
+import tensorflow as tf
+y_true=[1,0,1,0]
+
+y_pre = [0,1,1,1]
+y1=[[1,0],[0,1]]
+t = tf.confusion_matrix(y_true,y_pre)
+with tf.Session() as sess:
+    t1=sess.run(t)
+    t2=sess.run(t)
+    t=t1+t2
+    print(t,t[1,1])
+print(np.argmax(y1,1))

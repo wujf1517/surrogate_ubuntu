@@ -28,7 +28,7 @@ batch_size =32
 num_classes = 2             # 分类数目
 
 img_resize = [128,128]
-epoch =30                # dataset.repeat() 的参数，设置为None，可以不断取数
+epoch =40                # dataset.repeat() 的参数，设置为None，可以不断取数
 
 num_examples = 800 
 
