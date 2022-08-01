@@ -15,7 +15,11 @@ from email.header import Header
  */'''
 
 import pandas as pd
+<<<<<<< HEAD
 # import matplotlib.pyplot as plt
+=======
+import matplotlib.pyplot as plt
+>>>>>>> 76768a7a53e387fd5376a3cba6df5292dba09d5a
 import numpy as np
 import tensorflow as tf
 import os
@@ -671,8 +675,13 @@ def trajectoryWithoutVBoxLine(filepath,filedir:str,df: pd.DataFrame(),minx_total
 
 if __name__ == "__main__":
     # minx_array,miny_array=[],[]
+<<<<<<< HEAD
     filedir_sou = r'scenarioData2/base'+'/' # 原始场景文件位置
     filedir_tar = r'RGB/RGB2'
+=======
+    filedir_sou = r'E:\code\scenarioagentcnn\scenarioData4\base'+'\\' # 原始场景文件位置
+    filedir_tar = r'RGB\\RGB4'
+>>>>>>> 76768a7a53e387fd5376a3cba6df5292dba09d5a
 
     files = os.listdir(filedir_sou)   # 读入文件夹
     num_csv = len(files)       # 统计文件夹中的文件个数
@@ -684,11 +693,19 @@ if __name__ == "__main__":
     for i in range(0,num_csv,1):
         # file_path = r'E:\code\scenarioagentcnn\scnarioData\baseline\%s' % (i+1) + '.csv'
         # filedir = r'E:\code\scenarioagentcnn\scenarioData2\LK'+'\\'
+<<<<<<< HEAD
         file_path = filedir_sou+'/%s' % (i+1) + '.csv'
 
         # E:\code\scenarioagentcnn\PicClass\5
         # file_path2= 'imagergb\%s' % (i+1)+'.txt'
         file_path2= filedir_tar+'/%s' % (i+1)+'.txt'
+=======
+        file_path = filedir_sou+'\%s' % (i+1) + '.csv'
+
+        # E:\code\scenarioagentcnn\PicClass\5
+        # file_path2= 'imagergb\%s' % (i+1)+'.txt'
+        file_path2= filedir_tar+'\%s' % (i+1)+'.txt'
+>>>>>>> 76768a7a53e387fd5376a3cba6df5292dba09d5a
         fileWriter = open(file_path2, 'w+')
         # filepath = 'E:\code\scenarioagentcnn\scnarioData\baseline\',1,'.csv'
         # file_path = r'E:\code\scenarioagentcnn\scnarioData\baseline\1.csv'
