@@ -321,7 +321,8 @@ with tf.Session() as sess:
     correct_rate = correct/num_image
     print(num_image,"预测正确的:",correct,correct_rate)
     print("预测正确率:",correct_rate)
-    recall = cmatix_a[1,1]/(cmatix_a[1,1]+cmatix_a[1,0])
+    # recall = cmatix_a[1,1]/(cmatix_a[1,1]+cmatix_a[1,0])
+    recall = cmatix_a[0,0]/(cmatix_a[0,1]+cmatix_a[0,0])
     print(cmatix_a,recall,cmatix_a[1,1])
     print('recall：',recall) # 真阳在所有阳性中的比例
     coord.request_stop()

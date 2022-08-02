@@ -152,7 +152,7 @@ if __name__=='__main__':
 
 
     # '''全部转为测试文件'''
-    # filesave = 'dataRecord/LK5/'
+    # filesave = 'dataRecord/LK4/'
     # setDir(filesave+'1')
     # setDir(filesave+'2')
     # print("文件夹清空，正在准备放入新的图片")

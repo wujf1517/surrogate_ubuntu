@@ -188,14 +188,14 @@
 # a = 500
 # c = 7*a/2600
 # print(type(c))
-# import numpy as np
+import numpy as np
 
-# def one_hot(labels,Label_class):
-#     one_hot_label = np.array([[int(i == int(labels[j])) for i in range(Label_class)] for j in range(len(labels))])   
-#     return one_hot_label
+def one_hot(labels,Label_class):
+    one_hot_label = np.array([[int(i == int(labels[j])) for i in range(Label_class)] for j in range(len(labels))])   
+    return one_hot_label
 
-# a = [1,0,1,2]
-# print(one_hot(a,3))
+a = [1,0,1,1]
+print(one_hot(a,2))
 # print(one_hot(2,2))
 
 # import os
@@ -213,16 +213,16 @@
 #         os.mkdir(filepath)
 
 # setDir('PicClassTrain\\2')
-import numpy as np
-import tensorflow as tf
-y_true=[1,0,1,0]
+# import numpy as np
+# import tensorflow as tf
+# y_true=[1,0,1,0]
 
-y_pre = [0,1,1,1]
-y1=[[1,0],[0,1]]
-t = tf.confusion_matrix(y_true,y_pre)
-with tf.Session() as sess:
-    t1=sess.run(t)
-    t2=sess.run(t)
-    t=t1+t2
-    print(t,t[1,1])
-print(np.argmax(y1,1))
+# y_pre = [0,1,1,1]
+# y1=[[1,0],[0,1]]
+# t = tf.confusion_matrix(y_true,y_pre)
+# with tf.Session() as sess:
+#     t1=sess.run(t)
+#     t2=sess.run(t)
+#     t=t1+t2
+#     print(t,t[1,1])
+# print(np.argmax(y1,1))

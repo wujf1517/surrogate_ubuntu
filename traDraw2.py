@@ -674,8 +674,8 @@ def trajectoryWithoutVBoxLine(filepath,filedir:str,df: pd.DataFrame(),minx_total
 if __name__ == "__main__":
     # minx_array,miny_array=[],[]
 
-    filedir_sou = r'scenarioData5/base'+'/' # 原始场景文件位置
-    filedir_tar = r'RGB/RGB5'
+    filedir_sou = r'scenarioData4/base'+'/' # 原始场景文件位置
+    filedir_tar = r'RGB/RGB4'
 
 
     files = os.listdir(filedir_sou)   # 读入文件夹

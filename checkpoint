@@ -1,0 +1,2 @@
+model_checkpoint_path: "saver\\save_net"
+all_model_checkpoint_paths: "saver\\save_net"
